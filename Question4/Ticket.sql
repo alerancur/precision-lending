@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Ticket]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Summary] NVARCHAR(500) NOT NULL
+)

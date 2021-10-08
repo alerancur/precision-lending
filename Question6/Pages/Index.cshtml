@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+<canvas id="myChart" width="300" height="300"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['2004', '2005', '2006', '2007'],
+        datasets: [{
+            label: 'Sales',
+            data: [1000,1170,660,1030],
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor:  'rgb(255, 99, 132)',
+            borderWidth: 1
+        },
+        {
+            label: 'Expenses',
+            data: [400,460,1120,540],
+            borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }            
+        }
+    }
+});
+</script>
